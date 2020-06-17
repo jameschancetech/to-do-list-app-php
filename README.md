@@ -1,4 +1,4 @@
-# to-do-list-app-php
+# To Do list Javascript
 
 Simple to-do list application challenge using JavaScript.
 
