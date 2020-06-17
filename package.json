@@ -1,0 +1,29 @@
+{
+  "name": "to-do-list-app-js",
+  "version": "1.0.0",
+  "description": "Simple to-do list application challenge using JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameschancetech/to-do-list-app-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jameschancetech/to-do-list-app-js/issues"
+  },
+  "homepage": "https://github.com/jameschancetech/to-do-list-app-js#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "bulma": "^0.9.0"
+  }
+}
