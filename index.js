@@ -1,5 +1,4 @@
-import './node_modules/bulma/css/bulma.min.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css'; // Import precompiled Bootstrap css
 import '@fortawesome/fontawesome-free/css/all.css';
 import './index.css';
-
-console.log('This sucker works');

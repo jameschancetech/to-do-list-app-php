@@ -1,0 +1,15 @@
+/* * {
+  border: 1px solid red;
+} */
+
+.heading-area {
+  margin: 2rem 0;
+}
+
+.body-wrapper {
+  height: 100vh;
+}
+
+.todo-list-box {
+  margin: 2rem 0;
+}
