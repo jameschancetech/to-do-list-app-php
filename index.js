@@ -5,12 +5,12 @@ const noteContents = document.querySelector(`#note`);
 const noteArea = document.querySelector(`.notes-area`);
 
 function runDeleteButton() {
-  console.log(this);
-
-  // const deleteButton = document.querySelectorAll(`.delete`);
-  // deleteButton.addEventListener(`click`, e => {
-  //   e.srcElement.parentElement.remove();
-  // });
+  const deleteButton = document.querySelectorAll(`.delete`);
+  deleteButton.forEach(delbut => {
+    delbut.addEventListener(`click`, e => {
+      delbut.parentElement.remove();
+    });
+  });
 }
 
 function addToContainer(e) {

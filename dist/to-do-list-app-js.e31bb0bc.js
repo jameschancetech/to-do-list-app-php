@@ -199,10 +199,12 @@ var noteContents = document.querySelector("#note");
 var noteArea = document.querySelector(".notes-area");
 
 function runDeleteButton() {
-  console.log(this); // const deleteButton = document.querySelectorAll(`.delete`);
-  // deleteButton.addEventListener(`click`, e => {
-  //   e.srcElement.parentElement.remove();
-  // });
+  var deleteButton = document.querySelectorAll(".delete");
+  deleteButton.forEach(function (delbut) {
+    delbut.addEventListener("click", function (e) {
+      delbut.parentElement.remove();
+    });
+  });
 }
 
 function addToContainer(e) {
@@ -254,7 +256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53505" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54572" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
