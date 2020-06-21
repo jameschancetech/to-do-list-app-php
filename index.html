@@ -8,58 +8,21 @@
 </head>
 
 <body>
-  <div class="container body-wrapper">
+  <div class="wrapper">
+    <h1>To Do</h1>
+    <ul>
+      <li class="active">Live</li>
+      <li>Done</li>
+      <li>Archive</li>
+    </ul>
+    <div class="notes-area"></div>
 
-    <div class="container heading-area">
-      <h1>To Do</h1>
+    <div class="add-to-list">
+      <input type="text" name="note" id="note">
+      <button class="addToList"></button>
     </div>
-
-    <div class="container">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Live</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Done</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Archive</a>
-        </li>
-      </ul>
-
-      <div class="container" id="live">
-
-
-        <div class="media todo-list-box">
-          <div class="form-check">
-            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1"
-              value="option1" aria-label="...">
-          </div>
-          <div class="media-body">
-            <h5 class="mt-0">Get Milk</h5>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"
-              aria-label="...">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container add-todo-container">
-      <form class="form-inline">
-        <label class="sr-only" for="inlineFormInputName2">Name</label>
-        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
-
-
-        <button type="submit" class="btn btn-primary mb-2">Submit</button>
-      </form>
-    </div>
-
-
 
   </div>
-
-
 
   <script src="./index.js"></script>
 </body>
