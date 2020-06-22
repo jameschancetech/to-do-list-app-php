@@ -1,83 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap');
-* {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.active {
-  color: cyan;
-  padding-bottom: 1rem;
-  border-bottom: 3px solid cyan;
-}
-
 .wrapper{
-  width: 600px;
-  margin: 0 auto;
+  width: 60%;
+  margin: 1rem auto;
+  padding: 0 2rem;
 }
 
-hr {
-  margin: 2rem 0;
-}
-
-h1 {
-  margin: 2rem 0;
+.notes-area {
+  margin-top: 2rem;
+  display: block;
 }
 
 button {
   display: inline-block;
-  border-radius: 50%;
-  padding: .5rem;
-  margin: 1rem;
-  background: none;
-  border: 1px solid black;
-}
-
-li {
-  display: inline-block;
-  list-style: none;
-  margin: 1rem 1rem 1rem 0;
-  text-transform: uppercase;
-  font-weight: 600;
 }
 
 .note-container {
+  margin-top: .7rem;
+  width: 35rem;
+  /* min-width: 85%; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: .8rem 0;
-  margin: 0.8rem 0;
 }
 
-h4 {
-  min-width: 85%;
+.note-container p {
   display: inline-block;
-  margin-left: 0;
+  width: 88%;
 }
 
-.delete:hover {
-  background: red;
-}
-
-.add-to-list {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+hr {
+  margin: 3rem;
 }
 
 #note {
-  padding: 1rem;
-  border: none;
-  border-bottom: 1px solid lightgray;
-  width: 80%;
+  display: inline-block;
+  width: 90%
 }
 
-.addToList {
-  background: cyan;
-  font-weight: 500;
-  font-size: 2rem;
-  color: white;
-  padding: 1.5rem;
-  border: none;
+.add-to-list {
+  margin-bottom: 2rem;
+  width: 90%;
+  margin: 2rem auto;
 }

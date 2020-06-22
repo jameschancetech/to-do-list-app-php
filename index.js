@@ -1,29 +1,33 @@
+import './node_modules/papercss/dist/paper.min.css';
 import './index.css';
 
 const addToList = document.querySelector(`.addToList`);
 const noteContents = document.querySelector(`#note`);
 const noteArea = document.querySelector(`.notes-area`);
 
-function runDeleteButton() {
-  const deleteButton = document.querySelectorAll(`.delete`);
-  deleteButton.forEach(delbut => {
-    delbut.addEventListener(`click`, e => {
-      delbut.parentElement.remove();
+function runDoneButton() {
+  const doneButton = document.querySelectorAll(`.done`);
+  doneButton.forEach(doneBut => {
+    doneBut.addEventListener(`click`, e => {
+      doneBut.parentElement.parentElement.remove();
     });
   });
 }
 
 function addToContainer(e) {
   const myNoteHTML = `
-    <div class="note-container">
-      <button class="delete"></button>
-      <h4>${noteContents.value}</h4>
-      <button class="favourite"></button>
+    <div class="card note-container">
+      <div class="card-body">
+        <p class="card-text">
+          ${noteContents.value}
+        </p>
+        <button class="done btn-danger">Done</button>
+      </div>
     </div>
   `;
   noteArea.innerHTML += myNoteHTML;
   noteContents.value = ``;
-  runDeleteButton();
+  runDoneButton();
 }
 
 function checkContents() {

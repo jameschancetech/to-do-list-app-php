@@ -184,7 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"index.css":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/papercss/dist/paper.min.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -192,26 +197,28 @@ module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
+require("./node_modules/papercss/dist/paper.min.css");
+
 require("./index.css");
 
 var addToList = document.querySelector(".addToList");
 var noteContents = document.querySelector("#note");
 var noteArea = document.querySelector(".notes-area");
 
-function runDeleteButton() {
-  var deleteButton = document.querySelectorAll(".delete");
-  deleteButton.forEach(function (delbut) {
-    delbut.addEventListener("click", function (e) {
-      delbut.parentElement.remove();
+function runDoneButton() {
+  var doneButton = document.querySelectorAll(".done");
+  doneButton.forEach(function (doneBut) {
+    doneBut.addEventListener("click", function (e) {
+      doneBut.parentElement.parentElement.remove();
     });
   });
 }
 
 function addToContainer(e) {
-  var myNoteHTML = "\n    <div class=\"note-container\">\n      <button class=\"delete\"></button>\n      <h4>".concat(noteContents.value, "</h4>\n      <button class=\"favourite\"></button>\n    </div>\n  ");
+  var myNoteHTML = "\n    <div class=\"card note-container\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">\n          ".concat(noteContents.value, "\n        </p>\n        <button class=\"done btn-danger\">Done</button>\n      </div>\n    </div>\n  ");
   noteArea.innerHTML += myNoteHTML;
   noteContents.value = "";
-  runDeleteButton();
+  runDoneButton();
 }
 
 function checkContents() {
@@ -228,7 +235,7 @@ document.addEventListener("keydown", function (e) {
     checkContents();
   }
 });
-},{"./index.css":"index.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./node_modules/papercss/dist/paper.min.css":"node_modules/papercss/dist/paper.min.css","./index.css":"index.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -256,7 +263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54572" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55417" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
