@@ -1,7 +1,14 @@
+body {
+  background: url(./imgs/bg.jpg);
+  /*
+  Photo by Diego Passadori https://unsplash.com/@dipassadori?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText 
+  */
+}
 .wrapper{
   width: 60%;
   margin: 1rem auto;
   padding: 0 2rem;
+  background-color: white;
 }
 
 h1 {
