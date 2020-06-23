@@ -4,13 +4,19 @@ import './index.css';
 const addToList = document.querySelector(`.addToList`);
 const noteContents = document.querySelector(`#note`);
 const noteArea = document.querySelector(`.notes-area`);
+const completedNoteArea = document.querySelector(`#content2`);
+
+function moveTheCard(e) {
+  e.srcElement.parentElement.parentElement.classList.add(`completed`);
+  e.currentTarget.remove();
+  const completedNote = document.querySelector(`.completed`);
+  completedNoteArea.appendChild(completedNote);
+}
 
 function runDoneButton() {
   const doneButton = document.querySelectorAll(`.done`);
   doneButton.forEach(doneBut => {
-    doneBut.addEventListener(`click`, e => {
-      doneBut.parentElement.parentElement.remove();
-    });
+    doneBut.addEventListener(`click`, moveTheCard);
   });
 }
 

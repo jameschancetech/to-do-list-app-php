@@ -4,9 +4,14 @@
   padding: 0 2rem;
 }
 
+h1 {
+  width: 100%;
+  text-align: center;
+}
 .notes-area {
   margin-top: 2rem;
   display: block;
+  width: 100%;
 }
 
 button {
@@ -15,8 +20,7 @@ button {
 
 .note-container {
   margin-top: .7rem;
-  width: 35rem;
-  /* min-width: 85%; */
+  min-width: 85%;
   display: flex;
   justify-content: space-between;
 }
@@ -26,17 +30,20 @@ button {
   width: 88%;
 }
 
-hr {
-  margin: 3rem;
-}
-
-#note {
-  display: inline-block;
-  width: 90%
-}
-
 .add-to-list {
   margin-bottom: 2rem;
   width: 90%;
   margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+#note {
+  display: inline-block;
+  width: 75%
+}
+
+.addToList {
+  margin-left: 1rem;
+  min-width: 10%;
 }
